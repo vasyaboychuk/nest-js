@@ -26,6 +26,8 @@ export class UserController {
   getOneById(@Param('id') id: string) {
     return this.userService.getById(id);
   }
-  @Put()
-  updateUser() {}
+  @Delete('/:id')
+  delete(@Param('id') id: string) {
+    return this.userService.delete(id);
+  }
 }
